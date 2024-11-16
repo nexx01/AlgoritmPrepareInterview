@@ -1,5 +1,6 @@
 /*
 two points
+https://leetcode.com/problems/move-zeroes/description/
 Отказываемся перемещать местами 0 и не 0
 просто выставляем не 0 вперед и остаток заполняем 0
 Easy

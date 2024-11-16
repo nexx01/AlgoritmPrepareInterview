@@ -1,0 +1,33 @@
+
+/*
+977. Squares of a Sorted Array
+Easy
+https://leetcode.com/problems/squares-of-a-sorted-array/
+*/
+
+class Solution {
+    public int[] sortedSquares(int[] arr) {
+        int l=0; int r = arr.length-1;
+        int[] A=new int[arr.length];
+        int ind=r;
+        
+        while(ind>=0){
+            if(fun(l,r,arr)){
+                A[ind]=arr[r]*arr[r];
+                ind--; r--;
+            } else {
+                A[ind]=arr[l]*arr[l];
+                ind--; l++;
+            }
+        }
+        
+        return A;
+        
+    }
+    
+    boolean fun(int l,int r, int[] arr){
+        return Math.abs(arr[l])<Math.abs(arr[r]);
+    }
+
+
+}

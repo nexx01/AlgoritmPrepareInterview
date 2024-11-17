@@ -1,0 +1,35 @@
+/*
+680. Valid Palindrome II
+https://leetcode.com/problems/valid-palindrome-ii/description/
+
+680ValidPalindromeII
+Easy
+*/
+
+class Solution {
+    public boolean validPalindrome(String s) {
+        int skip=1;
+        int l=0; int r=s.length()-1;
+        while(r>=l){
+            char lC=s.charAt(l);
+            char rC=s.charAt(r);
+
+              if(lC!=rC){
+                return isPalidrome(s,l+1,r) ||
+                isPalidrome(s,l,r-1);
+              }
+            
+            l++; r--;
+        }
+        return true;
+    }
+
+    boolean isPalidrome(String s, int l , int r){
+        while(l<r){
+            if(s.charAt(l)!=s.charAt(r)) return false;
+
+            l++;r--;
+        }
+    return true;
+    }
+}

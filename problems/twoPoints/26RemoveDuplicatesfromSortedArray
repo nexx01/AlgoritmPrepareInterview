@@ -1,0 +1,33 @@
+/*
+26. Remove Duplicates from Sorted Array
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+26RemoveDuplicatesfromSortedArray
+easy
+*/
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int f=1;int s=1;
+        int c=1;
+
+        while(f<nums.length){
+            int fE=nums[f];
+            int sE=nums[s-1];
+            if(sE==fE){
+                f++;
+                continue;
+            } else {
+                replace(s,f,nums);
+                c++;
+                s++;f++;
+            }
+        }
+        return c;
+    }
+
+    void replace(int i1, int i2, int[] arr){
+        int t=arr[i1];
+        arr[i1]=arr[i2];
+        // arr[i2]=t;
+    }
+}

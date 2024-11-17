@@ -1,0 +1,29 @@
+/*
+11. Container With Most Water
+https://leetcode.com/problems/container-with-most-water/description/
+Medium
+O(n)
+O(1)
+*/
+
+class Solution {
+    public int maxArea(int[] height) {
+       int l=0; int r=height.length-1;
+        int M=0;
+
+
+        while(r>l){
+            int S=Math.min(height[l],height[r])*(r-l);
+            M=Math.max(M,S);
+
+         if(height[l]>height[r]){
+                r--;
+            } else {
+                l++;
+            }
+              
+        }    
+        return M;
+    }
+}
+

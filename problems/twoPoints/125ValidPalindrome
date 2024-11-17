@@ -1,0 +1,39 @@
+/*
+125. Valid Palindrome
+https://leetcode.com/problems/valid-palindrome/description/
+*/
+
+class Solution {
+    public boolean isPalindrome(String s) {
+        int l=0; int r=s.length()-1;
+        while(r>l){
+            char charL=s.charAt(l);
+            char charR=s.charAt(r);
+            if(r>l&&skip(charL)){
+                l++; continue;
+            }
+            if(r>l&&skip(charR)){
+                r--; continue;
+            }
+            
+            if(!isE(charL, charR)){
+                return false;
+            }
+            l++;r--;
+        }
+
+
+        return true;
+    }
+    
+    
+    boolean skip(char examL){ 
+        return !Character.isLetterOrDigit(examL);
+    }
+    
+    
+    boolean isE(char l, char r){
+        return Character.toLowerCase(l)==Character.toLowerCase(r);
+    }
+}
+

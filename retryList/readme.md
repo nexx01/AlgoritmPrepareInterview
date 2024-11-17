@@ -10,3 +10,7 @@ https://leetcode.com/problems/find-k-closest-elements/
 88. Merge Sorted Array two points https://leetcode.com/problems/merge-sorted-array/description/
 
 1385. Find the Distance Value Between Two Arrays Easy https://leetcode.com/problems/find-the-distance-value-between-two-arrays/description/
+
+680. Valid Palindrome II two point https://leetcode.com/problems/valid-palindrome-ii/description/
+
+

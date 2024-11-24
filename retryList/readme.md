@@ -14,3 +14,10 @@ https://leetcode.com/problems/find-k-closest-elements/
 680. Valid Palindrome II two point https://leetcode.com/problems/valid-palindrome-ii/description/
 
 
+---
+Stack and sorting
+20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
+
+
+
+

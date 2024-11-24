@@ -1,0 +1,29 @@
+/*
+20. Valid Parentheses
+https://leetcode.com/problems/valid-parentheses/description/
+easy
+*/
+
+class Solution {
+
+    public boolean isValid(String s) {
+      var queue  = new LinkedList<Character>();
+      var map = Map.of('(',')', '{','}', '[',']');
+      queue.push(s.charAt(0)); 
+      for(int i = 1; i<s.length(); i++){
+        var ch=new Character(s.charAt(i));
+        // var ch1 = map.get(queue.peek());
+        if(map.containsKey(ch)){
+            queue.push(ch); continue;
+        }    
+        if(queue.isEmpty()) return false;
+
+        var lastChar = queue.pop();
+        if(!ch.equals(map.get(lastChar))){
+         return false;
+        }    
+      }  
+
+      return queue.isEmpty();
+    }
+}

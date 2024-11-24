@@ -1,0 +1,29 @@
+/*
+1249. Minimum Remove to Make Valid Parentheses
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/
+medium
+*/
+
+class Solution {
+    public String minRemoveToMakeValid(String s) {
+        var q=new LinkedList<Integer>();
+        var a=s.split("");
+
+        for(int i=0;i<a.length;i++){
+            var ch=a[i];
+            if("(".equals(ch)){
+                q.push(i);
+            } else if(")".equals(ch) && q.size()==0){
+                a[i]="";
+            } else if(")".equals(ch)&&q.size()!=0){
+                q.pop();
+            }
+        }
+
+        for(Integer i:q){
+            a[i]="";
+        }
+
+      return String.join("",a);
+    }
+}

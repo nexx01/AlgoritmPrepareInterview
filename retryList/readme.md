@@ -18,6 +18,7 @@ https://leetcode.com/problems/find-k-closest-elements/
 Stack and sorting
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 
+[1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/) 
 
 
 

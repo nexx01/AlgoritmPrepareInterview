@@ -26,4 +26,66 @@ class Solution {
 
       return String.join("",a);
     }
+
+
+
+/*
+
+class Solution {
+    public String minRemoveToMakeValid(String s) {
+        var stack = new LinkedList<Pair>();
+
+        for(int i=0;i<s.length(); i++){
+            char ch = s.charAt(i);
+            if('('==ch){
+                var p=new Pair();
+                p.ch=ch;
+                p.ind=i;
+                stack.push(p);
+            } else {
+               if(')'==ch){
+                  
+                  if(stack.size()>0){
+                    var p = stack.pop();
+                    if('('==p.ch){
+                           
+                    } else{
+                        stack.push(p);
+                    var p2=new Pair();
+                     p2.ch=ch;
+                     p2.ind=i;
+                     stack.push(p2);
+                    }
+                  } else{
+                     var p2=new Pair();
+                     p2.ch=ch;
+                     p2.ind=i;
+                     stack.push(p2);
+                  }
+               } 
+            }
+        }
+      
+       StringBuilder sb = new StringBuilder(s);
+
+       for(Pair p : stack){
+        // System.out.println(stack);
+        // System.out.println(sb);
+         sb.replace(p.ind, p.ind+1,"");
+       }
+
+      return sb.toString();
+    }
+
+    static class Pair{
+       public char ch;
+       public int ind;
+
+       public String toString(){
+        return ch + " "+ ind;
+       }
+
+    }
+}
+*/
 }

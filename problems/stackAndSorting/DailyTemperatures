@@ -1,0 +1,38 @@
+/*
+739. Daily Temperatures 
+https://leetcode.com/problems/daily-temperatures/description/
+*/
+
+
+class Solution {
+    public int[] dailyTemperatures(int[] temperatures) {
+        LinkedList<Pair> st= new LinkedList<>();
+        int[] res=new int[temperatures.length];
+
+        // st.push(new Pair(temperatures[0],0));
+        // int iRes=1; //73-0
+        for(int i = 0; i<temperatures.length; i++){
+                int iRes=1;
+                while(st.size()>0&&temperatures[i]>st.peekFirst().val){ 
+                    var p = st.pollFirst();
+                    res[p.pos]=i-p.pos; 
+                    iRes++; 
+                }
+             st.push(new Pair(temperatures[i],i));
+            //   System.out.println(st + "   "+Arrays.toString(res));
+            }
+        return res;
+    }
+
+    static class Pair{
+        int val;
+        int pos;
+        Pair(int v,int p){
+            val=v; pos=p;
+        }
+
+       public String toString(){
+            return val + "-" + pos;
+        }
+    }
+}

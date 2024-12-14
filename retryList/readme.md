@@ -24,5 +24,6 @@ Stack and sorting
 
 [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/)
 
+[205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/description/)
 
 

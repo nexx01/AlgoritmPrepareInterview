@@ -22,5 +22,7 @@ Stack and sorting
 
 [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/description/)
 
+[36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/)
+
 
 

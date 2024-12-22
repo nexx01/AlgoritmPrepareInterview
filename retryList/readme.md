@@ -26,4 +26,6 @@ Stack and sorting
 
 [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/description/)
 
+[146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+
 

@@ -24,6 +24,8 @@ Stack and sorting
 
 [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/)
 
+[2657. Find the Prefix Common Array of Two Arrays](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/)
+
 [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/description/)
 
 [146. LRU Cache](https://leetcode.com/problems/lru-cache/)

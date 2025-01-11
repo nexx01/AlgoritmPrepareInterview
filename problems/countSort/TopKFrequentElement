@@ -1,0 +1,74 @@
+/*
+347. Top K Frequent Elements
+https://leetcode.com/problems/top-k-frequent-elements/description/
+  */
+
+class Solution {
+
+        public int[] topKFrequent(int[] nums, int k) {
+        var map=new HashMap<Integer, Integer>();
+        for(Integer i: nums){
+           map.merge(i, 1, (a1,a2)->a1+1);
+        }
+        
+        // System.out.println(map);
+        List<List<Integer>> frequencyList = Arrays.asList(new List[nums.length+1]);
+        for(Map.Entry<Integer, Integer> entry: map.entrySet()){
+            if(frequencyList.get(entry.getValue())==null) frequencyList.set(entry.getValue(),new ArrayList<Integer>());
+
+            frequencyList.get(entry.getValue()).add(entry.getKey());
+        }
+
+     System.out.println(frequencyList);
+       var res=new int[k];
+
+       
+        // for(int i = 0; k>0&&i<frequencyList.length;i++){
+        //     System.out.println(frequencyList[i] + " "+k + "  "+ i);
+        //     if(frequencyList[i]!=0){
+        //         res[res.length-k]=i;
+        //         k--;
+        //     }   
+        // }
+    
+   
+        for(int i = frequencyList.size()-1; k>0&&i>=0;i--){
+           // System.out.println(frequencyList[i] + " "+k + "  "+ i);
+            if(frequencyList.get(i)!=null){
+
+                for(Integer n : frequencyList.get(i)){
+                      res[res.length-k]=n;
+                    k--;
+                }
+    
+            }   
+        }
+    return res;
+    }
+
+    // public int[] topKFrequent(int[] nums, int k) {
+    //     var map=new HashMap<Integer, Integer>();
+    //     for(Integer i: nums){
+    //         if(map.containsKey(i)){
+    //             map.put(i,map.get(i)+1);
+    //         }else{
+    //             map.put(i,1);
+    //         }
+
+    //     }
+
+    //        var heap =  new PriorityQueue<Map.Entry<Integer,Integer>>(Comparator.comparing(e->e.getValue(),(i1,i2)->i2-i1)); 
+    //        var entries = map.entrySet();
+    //        //heap size need only k
+    //         for(Map.Entry entry:entries){
+    //             heap.offer(entry);
+    //         }
+    //         var res =new int[k];
+    //         for(int i=0;i<k;i++){
+    //            res[i]=heap.poll().getKey();
+    //         }
+
+    //         //System.out.println(heap);
+    //         return res;
+    // }
+}

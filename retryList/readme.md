@@ -30,6 +30,8 @@ Stack and sorting
 
 [146. LRU Cache](https://leetcode.com/problems/lru-cache/)
 
+[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)
+
 [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
 
 [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/)

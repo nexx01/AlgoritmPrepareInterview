@@ -39,3 +39,4 @@ Stack and sorting
 [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 
+[204. Count Primes](https://leetcode.com/problems/count-primes/description/)

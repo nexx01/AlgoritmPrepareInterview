@@ -1,8 +1,6 @@
 
 
 
-1385. Find the Distance Value Between Two Arrays Easy https://leetcode.com/problems/find-the-distance-value-between-two-arrays/description/
----
 Stack and sorting
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 

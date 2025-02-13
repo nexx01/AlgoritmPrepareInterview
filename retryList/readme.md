@@ -1,10 +1,5 @@
 
 
-
-
-
-[1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/) 
-
 [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/description/)
 
 [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/)
